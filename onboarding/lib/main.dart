@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:onboarding/onboarding_1.dart';
 import 'package:onboarding/onboarding_2.dart';
 import 'package:onboarding/onboarding_3.dart';
+import 'package:onboarding/sign_up/form_page.dart';
+import 'package:onboarding/sign_up/sign_up_page.dart';
 import 'package:onboarding/widgets/button_get_started.dart';
 
 void main() {
@@ -39,15 +41,15 @@ class _MyApp extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    //bool isFinalPage = pageController.
-
     return MaterialApp(
       title: 'Onboadring',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
+        //appBar: AppBar(),
         body: PageView(
           controller: _pageController,
           children: const [
+            SignUpPage(),
             Onboarding1(),
             Onboarding2(),
             Onboarding3(),
@@ -74,7 +76,9 @@ class _MyApp extends State<MyApp> {
                   ),
                 ),
               )
-            : const ButtonGetStarted(),
+            : const ButtonGetStarted(
+                title: 'GET STARTED',
+              ),
       ),
     );
   }

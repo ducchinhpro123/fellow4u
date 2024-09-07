@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ButtonGetStarted extends StatelessWidget {
-  const ButtonGetStarted({super.key});
+  const ButtonGetStarted({super.key, required this.title});
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +24,10 @@ class ButtonGetStarted extends StatelessWidget {
                   ),
                   padding: const EdgeInsets.symmetric(vertical: 16.0),
                 ),
-                child: const Text(
-                  'GET STARTED',
+                child: Text(
+                  title,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 14,
                   ),

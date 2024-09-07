@@ -71,6 +71,10 @@ flutter:
     - images/page2/shape_1.svg
     - images/page2/shape_2.svg
     - images/page3/background.svg
+    - images/sign_up/cloud.svg
+    - images/sign_up/icon.svg
+    - images/sign_up/line.svg
+    - images/sign_up/plane.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

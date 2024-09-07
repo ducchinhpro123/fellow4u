@@ -120,7 +120,10 @@ class FormPage extends StatelessWidget {
               ],
             ),
           ),
-          const CustomButton(title: 'SIGN UP')
+          const CustomButton(
+            title: 'SIGN UP',
+            marginLeft: 0,
+          )
         ],
       ),
     );

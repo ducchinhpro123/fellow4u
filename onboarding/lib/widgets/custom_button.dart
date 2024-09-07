@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.title});
+  const CustomButton(
+      {super.key, required this.title, required this.marginLeft});
   final String title;
+  final double marginLeft;
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class CustomButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Container(
-            margin: const EdgeInsets.only(left: 31.0),
+            margin: EdgeInsets.only(left: marginLeft),
             padding: const EdgeInsets.fromLTRB(0, 30, 0, 30),
             child: SizedBox(
               width: 300.0,

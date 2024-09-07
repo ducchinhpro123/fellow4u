@@ -48,10 +48,11 @@ class _MyApp extends State<MyApp> {
         body: PageView(
           controller: _pageController,
           children: const [
-            SignUpPage(),
+            //SignUpPage(),
             Onboarding1(),
             Onboarding2(),
             Onboarding3(),
+            SignUpPage(),
           ],
         ),
         floatingActionButton: currentPage < 2
@@ -75,9 +76,7 @@ class _MyApp extends State<MyApp> {
                   ),
                 ),
               )
-            : const CustomButton(
-                title: 'GET STARTED',
-              ),
+            : null,
       ),
     );
   }

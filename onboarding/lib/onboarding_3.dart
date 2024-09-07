@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:onboarding/widgets/custom_button.dart';
 
 class Onboarding3 extends StatelessWidget {
   const Onboarding3({super.key});
@@ -22,7 +23,7 @@ class Onboarding3 extends StatelessWidget {
                   ),
                 ),
                 const Align(
-                  alignment: Alignment(0.0, 0.4),
+                  alignment: Alignment(0.0, 0.6),
                   child: Text(
                     'Many tours around the world',
                     style: TextStyle(
@@ -33,7 +34,7 @@ class Onboarding3 extends StatelessWidget {
                   ),
                 ),
                 const Align(
-                  alignment: Alignment(0.0, 0.55),
+                  alignment: Alignment(0.0, 0.8),
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(59, 0, 59, 0),
                     child: Text(
@@ -48,7 +49,7 @@ class Onboarding3 extends StatelessWidget {
                   ),
                 ),
                 const Align(
-                  alignment: Alignment(0, 0.7),
+                  alignment: Alignment(0, 0.9),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -60,6 +61,10 @@ class Onboarding3 extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          const CustomButton(
+            title: 'GET STARTED',
+            marginLeft: 0,
           ),
         ],
       ),

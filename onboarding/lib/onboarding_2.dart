@@ -14,32 +14,40 @@ class Onboarding2 extends StatelessWidget {
             child: Stack(
               children: [
                 Align(
-                  alignment: const Alignment(0.5, -0.6),
+                  alignment: const Alignment(0.5, -0.5),
                   child: SvgPicture.asset(
-                    width: MediaQuery.of(context).size.width * 0.85,
-                    'images/background.svg',
+                    width: MediaQuery.of(context).size.width,
+                    'images/page2/background.svg',
                   ),
                 ),
                 Align(
-                  alignment: const Alignment(-0.7, -0.7),
-                  child: SvgPicture.asset('images/cloud_2.svg'),
-                ),
-                Align(
-                  alignment: const Alignment(0.5, -0.2),
+                  alignment: const Alignment(-0.82, -0.67),
                   child: SvgPicture.asset(
-                    'images/boy.svg',
+                    'images/page2/shape_1.svg',
+                    width: MediaQuery.of(context).size.width * 0.5,
                   ),
                 ),
                 Align(
-                  alignment: const Alignment(-0.4, -0.2),
+                  alignment: const Alignment(0.82, -0.69),
                   child: SvgPicture.asset(
-                    'images/girl.svg',
+                    'images/page2/shape_2.svg',
+                    width: MediaQuery.of(context).size.width * 0.5,
+                  ),
+                ),
+                Align(
+                  alignment: const Alignment(0.7, -0.8),
+                  child: SvgPicture.asset('images/page2/cloud.svg'),
+                ),
+                Align(
+                  alignment: const Alignment(0.0, -0.2),
+                  child: SvgPicture.asset(
+                    'images/page2/girl.svg',
                   ),
                 ),
                 const Align(
                   alignment: Alignment(0.0, 0.4),
                   child: Text(
-                    'Find a local guide easily',
+                    'Many tours around the world',
                     style: TextStyle(
                       color: Color(0xff121212),
                       fontSize: 24,
@@ -50,9 +58,9 @@ class Onboarding2 extends StatelessWidget {
                 const Align(
                   alignment: Alignment(0.0, 0.55),
                   child: Padding(
-                    padding: EdgeInsets.fromLTRB(69, 0, 69, 0),
+                    padding: EdgeInsets.fromLTRB(59, 0, 59, 0),
                     child: Text(
-                      'With Fellow4U, you can find a local guide for you trip easily and explore as the way you want.',
+                      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
                       style: TextStyle(
                         color: Color(0xff555555),
                         fontSize: 16,
@@ -67,8 +75,8 @@ class Onboarding2 extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.horizontal_rule, color: Color(0xff04EBBE)),
-                      Icon(Icons.remove),
+                      Icon(Icons.horizontal_rule),
+                      Icon(Icons.remove, color: Color(0xff04EBBE)),
                       Icon(Icons.remove),
                     ],
                   ),

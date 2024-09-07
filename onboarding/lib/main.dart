@@ -12,11 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final PageController pageController = PageController();
+
     return MaterialApp(
       title: 'Onboadring',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
         body: PageView(
+          controller: pageController,
           children: const [
             Onboarding1(),
             Onboarding2(),
@@ -27,7 +30,13 @@ class MyApp extends StatelessWidget {
           //backgroundColor: Colors.white,
           margin: const EdgeInsets.only(bottom: 16.0),
           child: TextButton(
-            onPressed: () {},
+            onPressed: () {
+              if (pageController.hasClients) {
+                pageController.nextPage(
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeInOut);
+              }
+            },
             child: const Text(
               'SKIP',
               style: TextStyle(

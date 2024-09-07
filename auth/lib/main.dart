@@ -16,6 +16,26 @@ class MyApp extends StatelessWidget {
         backgroundColor: const Color(0xff00CEA6),
         body: Stack(
           children: [
+            Align(
+              alignment: const Alignment(1, -0.8),
+              child: SvgPicture.asset('images/cloud.svg'),
+            ),
+            Align(
+              alignment: const Alignment(0.4, -0.56),
+              child: SvgPicture.asset('images/cloud_3.svg'),
+            ),
+            Align(
+              alignment: const Alignment(-1, -0.7),
+              child: SvgPicture.asset('images/cloud_2.svg'),
+            ),
+            Align(
+              alignment: const Alignment(-0.9, -0.5),
+              child: SvgPicture.asset('images/line.svg'),
+            ),
+            Align(
+              alignment: const Alignment(0.2, -0.65),
+              child: SvgPicture.asset('images/plane.svg'),
+            ),
             Center(
               child: Image.asset('images/Logo.png'),
             ),
@@ -27,6 +47,8 @@ class MyApp extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: SvgPicture.asset(
                 'images/Vector_4.svg',
+                width: MediaQuery.of(context).size.width,
+                fit: BoxFit.fitWidth,
               ),
             ),
             Align(
@@ -35,7 +57,9 @@ class MyApp extends StatelessWidget {
             ),
             Align(
               alignment: const Alignment(-0.9, 1),
-              child: SvgPicture.asset('images/leaf_2.svg'),
+              child: SvgPicture.asset(
+                'images/leaf_2.svg',
+              ),
             ),
             Align(
               alignment: const Alignment(-0.7, 1),

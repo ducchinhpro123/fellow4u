@@ -7,19 +7,39 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyApp();
+}
+
+class _MyApp extends State<MyApp> {
+  final PageController _pageController = PageController();
+  int currentPage = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController.addListener(() {
+      // if pageController.page?.round() is not null then resolves page
+      // else currentPage = 0
+      setState(() {
+        currentPage = _pageController.page?.round() ?? 0;
+      });
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final PageController pageController = PageController();
+    //bool isFinalPage = pageController.
 
     return MaterialApp(
       title: 'Onboadring',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
         body: PageView(
-          controller: pageController,
+          controller: _pageController,
           children: const [
             Onboarding1(),
             Onboarding2(),
@@ -31,8 +51,8 @@ class MyApp extends StatelessWidget {
           margin: const EdgeInsets.only(bottom: 16.0),
           child: TextButton(
             onPressed: () {
-              if (pageController.hasClients) {
-                pageController.nextPage(
+              if (_pageController.hasClients) {
+                _pageController.nextPage(
                     duration: const Duration(milliseconds: 300),
                     curve: Curves.easeInOut);
               }

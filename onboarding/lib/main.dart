@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:onboarding/onboarding_1.dart';
 import 'package:onboarding/onboarding_2.dart';
 import 'package:onboarding/onboarding_3.dart';
+import 'package:onboarding/widgets/button_get_started.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,6 @@ class _MyApp extends State<MyApp> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     _pageController.dispose();
   }
@@ -74,7 +74,7 @@ class _MyApp extends State<MyApp> {
                   ),
                 ),
               )
-            : null,
+            : const ButtonGetStarted(),
       ),
     );
   }

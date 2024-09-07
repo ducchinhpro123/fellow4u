@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:onboarding/onboarding_1.dart';
 import 'package:onboarding/onboarding_2.dart';
 import 'package:onboarding/onboarding_3.dart';
-import 'package:onboarding/sign_up/form_page.dart';
 import 'package:onboarding/sign_up/sign_up_page.dart';
-import 'package:onboarding/widgets/button_get_started.dart';
+import 'package:onboarding/widgets/custom_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -76,7 +75,7 @@ class _MyApp extends State<MyApp> {
                   ),
                 ),
               )
-            : const ButtonGetStarted(
+            : const CustomButton(
                 title: 'GET STARTED',
               ),
       ),

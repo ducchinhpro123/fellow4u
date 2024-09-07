@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ButtonGetStarted extends StatelessWidget {
-  const ButtonGetStarted({super.key, required this.title});
+class CustomButton extends StatelessWidget {
+  const CustomButton({super.key, required this.title});
   final String title;
 
   @override

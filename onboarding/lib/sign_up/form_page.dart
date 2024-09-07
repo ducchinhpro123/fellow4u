@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:onboarding/widgets/button_get_started.dart';
+import 'package:onboarding/widgets/custom_button.dart';
 
 class FormPage extends StatelessWidget {
   const FormPage({super.key});
@@ -112,16 +112,15 @@ class FormPage extends StatelessWidget {
               style: DefaultTextStyle.of(context).style,
               children: const [
                 TextSpan(
-                  text: 'Terms & Conditions',
-                  style: TextStyle(
-                    color: Color(0xff00CEA6),
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                    text: 'Terms & Conditions',
+                    style: TextStyle(
+                      color: Color(0xff00CEA6),
+                      fontWeight: FontWeight.bold,
+                    )),
               ],
             ),
           ),
-          const ButtonGetStarted(title: 'SIGN UP')
+          const CustomButton(title: 'SIGN UP')
         ],
       ),
     );

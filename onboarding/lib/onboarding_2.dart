@@ -13,26 +13,23 @@ class Onboarding2 extends StatelessWidget {
           Expanded(
             child: Stack(
               children: [
-                Align(
-                  alignment: const Alignment(0.5, -0.5),
-                  child: SvgPicture.asset(
-                    width: MediaQuery.of(context).size.width,
-                    'images/page2/background.svg',
-                  ),
+                const AlignWidget(
+                  x: 0.5,
+                  y: -0.5,
+                  widthFactor: 0,
+                  svgAssetPath: 'images/page2/background.svg',
                 ),
-                Align(
-                  alignment: const Alignment(-0.82, -0.67),
-                  child: SvgPicture.asset(
-                    'images/page2/shape_1.svg',
-                    width: MediaQuery.of(context).size.width * 0.5,
-                  ),
+                const AlignWidget(
+                  x: -0.82,
+                  y: -0.67,
+                  widthFactor: 0.5,
+                  svgAssetPath: 'images/page2/shape_1.svg',
                 ),
-                Align(
-                  alignment: const Alignment(0.82, -0.69),
-                  child: SvgPicture.asset(
-                    'images/page2/shape_2.svg',
-                    width: MediaQuery.of(context).size.width * 0.5,
-                  ),
+                const AlignWidget(
+                  x: 0.82,
+                  y: -0.69,
+                  widthFactor: 0.5,
+                  svgAssetPath: 'images/page2/shape_2.svg',
                 ),
                 Align(
                   alignment: const Alignment(0.7, -0.8),
@@ -85,6 +82,32 @@ class Onboarding2 extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class AlignWidget extends StatelessWidget {
+  const AlignWidget(
+      {super.key,
+      required this.x,
+      required this.y,
+      required this.widthFactor,
+      required this.svgAssetPath});
+  final double x;
+  final double y;
+  final double widthFactor;
+  final String svgAssetPath;
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment(x, y),
+      child: SvgPicture.asset(
+        svgAssetPath,
+        width: widthFactor == 0
+            ? MediaQuery.of(context).size.width
+            : MediaQuery.of(context).size.width * widthFactor,
       ),
     );
   }

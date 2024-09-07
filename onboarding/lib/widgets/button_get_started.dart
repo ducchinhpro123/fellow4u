@@ -11,6 +11,7 @@ class ButtonGetStarted extends StatelessWidget {
         children: [
           Container(
             margin: const EdgeInsets.only(left: 31.0),
+            padding: const EdgeInsets.fromLTRB(0, 30, 0, 30),
             child: SizedBox(
               width: 300.0,
               child: ElevatedButton(
@@ -20,6 +21,7 @@ class ButtonGetStarted extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
+                  padding: const EdgeInsets.symmetric(vertical: 16.0),
                 ),
                 child: const Text(
                   'GET STARTED',

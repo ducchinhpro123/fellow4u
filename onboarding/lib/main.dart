@@ -31,6 +31,13 @@ class _MyApp extends State<MyApp> {
   }
 
   @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    _pageController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     //bool isFinalPage = pageController.
 
@@ -46,26 +53,28 @@ class _MyApp extends State<MyApp> {
             Onboarding3(),
           ],
         ),
-        floatingActionButton: Container(
-          //backgroundColor: Colors.white,
-          margin: const EdgeInsets.only(bottom: 16.0),
-          child: TextButton(
-            onPressed: () {
-              if (_pageController.hasClients) {
-                _pageController.nextPage(
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeInOut);
-              }
-            },
-            child: const Text(
-              'SKIP',
-              style: TextStyle(
-                color: Color(0xff777777),
-                fontSize: 16.0,
-              ),
-            ),
-          ),
-        ),
+        floatingActionButton: currentPage < 2
+            ? Container(
+                //backgroundColor: Colors.white,
+                margin: const EdgeInsets.only(bottom: 16.0),
+                child: TextButton(
+                  onPressed: () {
+                    if (_pageController.hasClients) {
+                      _pageController.nextPage(
+                          duration: const Duration(milliseconds: 300),
+                          curve: Curves.easeInOut);
+                    }
+                  },
+                  child: const Text(
+                    'SKIP',
+                    style: TextStyle(
+                      color: Color(0xff777777),
+                      fontSize: 16.0,
+                    ),
+                  ),
+                ),
+              )
+            : null,
       ),
     );
   }

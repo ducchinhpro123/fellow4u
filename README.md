@@ -1,7 +1,7 @@
 ## This repository as an excersise I'm doing in University. 
 - Flutter is fun.
 ---
-## Demo
+## These are screenshots.
 
 <div align="center">
   <img src="/assets/readme/Screenshot_1725764486.png" width="30%" />

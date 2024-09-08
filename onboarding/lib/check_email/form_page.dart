@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:onboarding/widgets/custom_button.dart';
 
 import 'package:simple_shadow/simple_shadow.dart';
 
@@ -42,11 +41,12 @@ class FormPage extends StatelessWidget {
               style: DefaultTextStyle.of(context).style,
               children: const [
                 TextSpan(
-                    text: 'Sign In',
-                    style: TextStyle(
-                      color: Color(0xff00CEA6),
-                      fontWeight: FontWeight.bold,
-                    )),
+                  text: 'Sign In',
+                  style: TextStyle(
+                    color: Color(0xff00CEA6),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ],
             ),
           ),

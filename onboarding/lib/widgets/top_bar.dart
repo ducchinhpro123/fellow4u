@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class TopBar extends StatefulWidget {
-  const TopBar({super.key});
+  const TopBar({super.key, required this.isSignUp});
+  final bool isSignUp;
 
   @override
   State<TopBar> createState() => _TopBarState();
@@ -64,56 +65,66 @@ class _TopBarState extends State<TopBar> {
                   children: [
                     Container(
                       margin: const EdgeInsets.only(left: 15),
-                      child: const Text(
-                        'Sign Up',
-                        style: TextStyle(
-                          fontSize: 34,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xff121212),
-                        ),
-                      ),
+                      child: widget.isSignUp
+                          ? const Text(
+                              'Sign Up',
+                              style: TextStyle(
+                                fontSize: 34,
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xff121212),
+                              ),
+                            )
+                          : const Text(
+                              'Sign In',
+                              style: TextStyle(
+                                fontSize: 34,
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xff121212),
+                              ),
+                            ),
                     ),
                   ],
                 ),
-                Row(
-                  children: [
-                    Radio(
-                      value: options[0],
-                      groupValue: currentOption,
-                      onChanged: (value) {
-                        setState(() {
-                          currentOption = value.toString();
-                        });
-                      },
-                    ),
-                    const Text(
-                      'Traveler',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xff333333),
+                if (widget.isSignUp)
+                  Row(
+                    children: [
+                      Radio(
+                        value: options[0],
+                        groupValue: currentOption,
+                        onChanged: (value) {
+                          setState(() {
+                            currentOption = value.toString();
+                          });
+                        },
                       ),
-                    ),
-                    const SizedBox(width: 30),
-                    Radio(
-                      value: options[1],
-                      groupValue: currentOption,
-                      onChanged: (value) {
-                        setState(() {
-                          currentOption = value.toString();
-                        });
-                      },
-                    ),
-                    const Text(
-                      'Guide',
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xff333333),
+                      const Text(
+                        'Traveler',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff333333),
+                        ),
                       ),
-                    ),
-                  ],
-                )
+                      const SizedBox(width: 30),
+                      Radio(
+                        value: options[1],
+                        groupValue: currentOption,
+                        onChanged: (value) {
+                          setState(() {
+                            currentOption = value.toString();
+                          });
+                        },
+                      ),
+                      const Text(
+                        'Guide',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff333333),
+                        ),
+                      ),
+                    ],
+                  ),
               ],
             ),
           ),

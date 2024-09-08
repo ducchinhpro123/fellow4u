@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:onboarding/sign_up/form_page.dart';
 import 'package:onboarding/widgets/top_bar.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
+class SignInPage extends StatelessWidget {
+  const SignInPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class SignUpPage extends StatelessWidget {
       child: Column(
         children: [
           TopBar(
-            isSignUp: true,
+            isSignUp: false,
           ),
           //Expanded(child: FormPage()),
           FormPage(),

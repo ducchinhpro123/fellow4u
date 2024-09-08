@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding/forgot_password/forgot_password_page.dart';
 import 'package:onboarding/onboarding_1.dart';
 import 'package:onboarding/onboarding_2.dart';
 import 'package:onboarding/onboarding_3.dart';
+import 'package:onboarding/sign_in/sign_in_page.dart';
 import 'package:onboarding/sign_up/sign_up_page.dart';
-import 'package:onboarding/widgets/custom_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,11 +49,12 @@ class _MyApp extends State<MyApp> {
         body: PageView(
           controller: _pageController,
           children: const [
-            //SignUpPage(),
+            ForgotPasswordPage(),
             Onboarding1(),
             Onboarding2(),
             Onboarding3(),
             SignUpPage(),
+            SignInPage(),
           ],
         ),
         floatingActionButton: currentPage < 2

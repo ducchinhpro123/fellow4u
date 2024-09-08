@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:onboarding/widgets/custom_button.dart';
 
 class FormPage extends StatelessWidget {
@@ -10,26 +9,48 @@ class FormPage extends StatelessWidget {
     return Form(
       child: Column(
         children: [
-          const SizedBox(height: 10),
           Row(
-            //crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                margin: const EdgeInsets.only(left: 15),
-                child: const Text(
-                  'Wellcome back, Yoo Jin',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w500,
-                    color: Color(
-                      0xff00CEA6,
+              Flexible(
+                child: Container(
+                  margin: const EdgeInsets.only(left: 18),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      label: Text('First Name'),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 30),
+              Flexible(
+                child: Container(
+                  margin: const EdgeInsets.only(right: 18),
+                  child: TextFormField(
+                    decoration: const InputDecoration(
+                      label: Text('Last Name'),
                     ),
                   ),
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 20),
+          SizedBox(
+            child: Container(
+              margin: const EdgeInsets.only(right: 18, left: 18),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text(
+                    'Country',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 20),
           SizedBox(
             child: Container(
               margin: const EdgeInsets.only(right: 18, left: 18),
@@ -45,6 +66,7 @@ class FormPage extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(height: 20),
           SizedBox(
             child: Container(
               margin: const EdgeInsets.only(right: 18, left: 18),
@@ -64,40 +86,33 @@ class FormPage extends StatelessWidget {
             alignment: Alignment.centerLeft,
             margin: const EdgeInsets.only(left: 18),
             child: const Text(
-              'Forgot password',
+              'Password has more than 6 letters',
             ),
           ),
           const SizedBox(height: 20),
-          const CustomButton(
-            title: 'SIGN IN',
-            marginLeft: 0,
+          SizedBox(
+            child: Container(
+              margin: const EdgeInsets.only(right: 18, left: 18),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                  label: Text(
+                    'Confirm Password',
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ),
-          const Text('or sign in with'),
-          const SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SvgPicture.asset(
-                'images/sign_in/facebook.svg',
-              ),
-              const SizedBox(width: 15),
-              SvgPicture.asset(
-                'images/sign_in/line.svg',
-              ),
-              const SizedBox(width: 15),
-              SvgPicture.asset(
-                'images/sign_in/talk.svg',
-              ),
-            ],
-          ),
-          const SizedBox(height: 120),
+          const SizedBox(height: 30),
           RichText(
             text: TextSpan(
-              text: 'Don’t have an account? ',
+              text: 'By Signing Up, you agree to our ',
               style: DefaultTextStyle.of(context).style,
               children: const [
                 TextSpan(
-                    text: 'Sign Up',
+                    text: 'Terms & Conditions',
                     style: TextStyle(
                       color: Color(0xff00CEA6),
                       fontWeight: FontWeight.bold,
@@ -105,6 +120,10 @@ class FormPage extends StatelessWidget {
               ],
             ),
           ),
+          const CustomButton(
+            title: 'SIGN UP',
+            marginLeft: 0,
+          )
         ],
       ),
     );

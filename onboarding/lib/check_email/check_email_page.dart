@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:onboarding/sign_up/form_page.dart';
+import 'package:onboarding/check_email/form_page.dart';
 import 'package:onboarding/widgets/top_bar.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
+class CheckEmailPage extends StatelessWidget {
+  const CheckEmailPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +11,8 @@ class SignUpPage extends StatelessWidget {
       child: Column(
         children: [
           TopBar(
-            isSignUp: true,
-            title: 'Sign Up',
+            isSignUp: false,
+            title: 'Check Email',
           ),
           //Expanded(child: FormPage()),
           FormPage(),

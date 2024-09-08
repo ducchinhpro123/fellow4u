@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:onboarding/sign_up/form_page.dart';
+import 'package:onboarding/forgot_password/form_page.dart';
 import 'package:onboarding/widgets/top_bar.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
@@ -12,6 +12,7 @@ class ForgotPasswordPage extends StatelessWidget {
         children: [
           TopBar(
             isSignUp: false,
+            title: 'Forgot password',
           ),
           //Expanded(child: FormPage()),
           FormPage(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding/check_email/check_email_page.dart';
 import 'package:onboarding/forgot_password/forgot_password_page.dart';
 import 'package:onboarding/onboarding_1.dart';
 import 'package:onboarding/onboarding_2.dart';
@@ -49,6 +50,7 @@ class _MyApp extends State<MyApp> {
         body: PageView(
           controller: _pageController,
           children: const [
+            CheckEmailPage(),
             ForgotPasswordPage(),
             Onboarding1(),
             Onboarding2(),

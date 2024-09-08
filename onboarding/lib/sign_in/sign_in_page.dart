@@ -12,6 +12,7 @@ class SignInPage extends StatelessWidget {
         children: [
           TopBar(
             isSignUp: false,
+            title: 'Sign In',
           ),
           //Expanded(child: FormPage()),
           FormPage(),

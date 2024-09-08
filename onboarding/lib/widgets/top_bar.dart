@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class TopBar extends StatefulWidget {
-  const TopBar({super.key, required this.isSignUp});
+  const TopBar({super.key, required this.isSignUp, required this.title});
   final bool isSignUp;
+  final String title;
 
   @override
   State<TopBar> createState() => _TopBarState();
@@ -65,23 +66,14 @@ class _TopBarState extends State<TopBar> {
                   children: [
                     Container(
                       margin: const EdgeInsets.only(left: 15),
-                      child: widget.isSignUp
-                          ? const Text(
-                              'Sign Up',
-                              style: TextStyle(
-                                fontSize: 34,
-                                fontWeight: FontWeight.w600,
-                                color: Color(0xff121212),
-                              ),
-                            )
-                          : const Text(
-                              'Sign In',
-                              style: TextStyle(
-                                fontSize: 34,
-                                fontWeight: FontWeight.w600,
-                                color: Color(0xff121212),
-                              ),
-                            ),
+                      child: Text(
+                        widget.title,
+                        style: const TextStyle(
+                          fontSize: 34,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xff121212),
+                        ),
+                      ),
                     ),
                   ],
                 ),

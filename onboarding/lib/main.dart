@@ -50,13 +50,13 @@ class _MyApp extends State<MyApp> {
         body: PageView(
           controller: _pageController,
           children: const [
-            CheckEmailPage(),
-            ForgotPasswordPage(),
             Onboarding1(),
             Onboarding2(),
             Onboarding3(),
             SignUpPage(),
             SignInPage(),
+            ForgotPasswordPage(),
+            CheckEmailPage(),
           ],
         ),
         floatingActionButton: currentPage < 2

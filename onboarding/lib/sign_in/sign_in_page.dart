@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:onboarding/sign_up/form_page.dart';
+import 'package:onboarding/sign_in/form_page.dart';
 import 'package:onboarding/widgets/top_bar.dart';
 
 class SignInPage extends StatelessWidget {
@@ -12,7 +12,7 @@ class SignInPage extends StatelessWidget {
         children: [
           TopBar(
             isSignUp: false,
-            title: 'Sign In',
+            title: 'Sign Up',
           ),
           //Expanded(child: FormPage()),
           FormPage(),

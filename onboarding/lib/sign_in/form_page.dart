@@ -11,9 +11,12 @@ class FormPage extends StatefulWidget {
 }
 
 class _FormPage extends State<FormPage> {
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: _formKey,
       child: Column(
         children: [
           Row(
@@ -127,11 +130,11 @@ class _FormPage extends State<FormPage> {
               ],
             ),
           ),
-          //const CustomButton(
-          //  title: 'SIGN UP',
-          //  marginLeft: 0,
-          //  formKey: ,
-          //)
+          CustomButton(
+            title: 'SIGN UP',
+            marginLeft: 0,
+            formKey: _formKey,
+          )
         ],
       ),
     );

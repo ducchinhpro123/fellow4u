@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onboarding/check_email/check_email_page.dart';
 import 'package:onboarding/forgot_password/forgot_password_page.dart';
+import 'package:onboarding/onboarding.dart';
 import 'package:onboarding/onboarding_1.dart';
 import 'package:onboarding/onboarding_2.dart';
 import 'package:onboarding/onboarding_3.dart';
@@ -50,6 +51,7 @@ class _MyApp extends State<MyApp> {
         body: PageView(
           controller: _pageController,
           children: const [
+            Onboarding(),
             Onboarding1(),
             Onboarding2(),
             Onboarding3(),
@@ -59,7 +61,7 @@ class _MyApp extends State<MyApp> {
             CheckEmailPage(),
           ],
         ),
-        floatingActionButton: currentPage < 2
+        floatingActionButton: currentPage < 2 && currentPage != 0
             ? Container(
                 //backgroundColor: Colors.white,
                 margin: const EdgeInsets.only(bottom: 16.0),

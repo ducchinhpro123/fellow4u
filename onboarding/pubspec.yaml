@@ -82,6 +82,19 @@ flutter:
     - images/sign_in/talk.svg
 
     - images/check_email/envelope.svg
+    
+    - images/onboarding/Logo.png
+    - images/onboarding/Vector_4.svg
+    - images/onboarding/hat.svg
+    - images/onboarding/leaf_1.svg
+    - images/onboarding/leaf_2.svg
+    - images/onboarding/leaf_3.svg
+    - images/onboarding/cloud.svg
+    - images/onboarding/cloud_2.svg
+    - images/onboarding/cloud_3.svg
+    - images/onboarding/line.svg
+    - images/onboarding/plane.svg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

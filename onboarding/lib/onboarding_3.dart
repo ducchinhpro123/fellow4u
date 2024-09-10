@@ -62,10 +62,10 @@ class Onboarding3 extends StatelessWidget {
               ],
             ),
           ),
-          const CustomButton(
-            title: 'GET STARTED',
-            marginLeft: 0,
-          ),
+          //const CustomButton(
+          //  title: 'GET STARTED',
+          //  marginLeft: 31,
+          //),
         ],
       ),
     );

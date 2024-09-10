@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:onboarding/widgets/custom_button.dart';
 
-class FormPage extends StatelessWidget {
+class FormPage extends StatefulWidget {
   const FormPage({super.key});
 
+  @override
+  State<StatefulWidget> createState() {
+    return _FormPage();
+  }
+}
+
+class _FormPage extends State<FormPage> {
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -120,10 +127,11 @@ class FormPage extends StatelessWidget {
               ],
             ),
           ),
-          const CustomButton(
-            title: 'SIGN UP',
-            marginLeft: 0,
-          )
+          //const CustomButton(
+          //  title: 'SIGN UP',
+          //  marginLeft: 0,
+          //  formKey: ,
+          //)
         ],
       ),
     );

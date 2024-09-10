@@ -2,12 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:onboarding/widgets/custom_button.dart';
 
-class FormPage extends StatelessWidget {
+class FormPage extends StatefulWidget {
   const FormPage({super.key});
+
+  @override
+  State<StatefulWidget> createState() {
+    return _FormPageState();
+  }
+}
+
+class _FormPageState extends State<FormPage> {
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: _formKey,
       child: Column(
         children: [
           const SizedBox(height: 10),
@@ -34,6 +44,12 @@ class FormPage extends StatelessWidget {
             child: Container(
               margin: const EdgeInsets.only(right: 18, left: 18),
               child: TextFormField(
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please insert some values';
+                  }
+                  return null;
+                },
                 decoration: const InputDecoration(
                   label: Text(
                     'Email',
@@ -49,6 +65,12 @@ class FormPage extends StatelessWidget {
             child: Container(
               margin: const EdgeInsets.only(right: 18, left: 18),
               child: TextFormField(
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please insert some values';
+                  }
+                  return null;
+                },
                 decoration: const InputDecoration(
                   label: Text(
                     'Password',
@@ -68,9 +90,10 @@ class FormPage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
-          const CustomButton(
+          CustomButton(
             title: 'SIGN IN',
             marginLeft: 0,
+            formKey: _formKey,
           ),
           const Text('or sign in with'),
           const SizedBox(height: 20),
@@ -97,11 +120,12 @@ class FormPage extends StatelessWidget {
               style: DefaultTextStyle.of(context).style,
               children: const [
                 TextSpan(
-                    text: 'Sign Up',
-                    style: TextStyle(
-                      color: Color(0xff00CEA6),
-                      fontWeight: FontWeight.bold,
-                    )),
+                  text: 'Sign Up',
+                  style: TextStyle(
+                    color: Color(0xff00CEA6),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ],
             ),
           ),

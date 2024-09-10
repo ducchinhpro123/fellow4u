@@ -39,10 +39,10 @@ class FormPage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 30),
-          const CustomButton(
-            title: 'SEND',
-            marginLeft: 0,
-          ),
+          //const CustomButton(
+          //  title: 'SEND',
+          //  marginLeft: 0,
+          //),
           const SizedBox(height: 120),
           RichText(
             text: TextSpan(

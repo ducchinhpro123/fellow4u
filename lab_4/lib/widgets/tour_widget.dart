@@ -22,8 +22,7 @@ class TourWidgetState extends State<TourWidget> {
           children: [
             Stack(
               children: [
-                Image.asset(widget.tour.imageUrl,
-                    fit: BoxFit.contain, width: double.infinity),
+                Image.asset(widget.tour.imageUrl, fit: BoxFit.contain, width: double.infinity),
                 const Positioned(
                   left: 10,
                   bottom: 10,
@@ -92,7 +91,7 @@ class TourWidgetState extends State<TourWidget> {
                       Column(
                         children: [
                           Text(
-                             "\$" + widget.tour.price.toString(),
+                             "\$${widget.tour.price}",
                             style: const TextStyle(
                               color: Color(0xff00CEA6),
                               fontSize: 16,
